@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  background-color: #FBF5E9;
+  background-color: #FEF7ED;
   font-family: 'Noto Serif JP', serif;
   display: flex;
   flex-direction: column;
@@ -10,23 +10,37 @@ body {
   align-items: center;
   height: 100vh;
   overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .logo {
   width: 200px;
-  max-width: 60vw;
+  max-width: 80vw;
 }
 
 .fade-text {
   opacity: 0;
-  font-size: 1rem;
-  color: #666;
-  margin-top: 5px;
-  animation: fadeIn 1s ease-in-out forwards;
+  font-size: 1.6rem;
+  color: #444;
+  margin-top: 20px;
+  animation: fadeIn 2s ease-in-out forwards;
+  text-align: center;
 }
 
 .text2 {
-  animation-delay: 2s;
+  animation-delay: 3s;
+}
+
+/* スマホ用にフォントサイズ調整 */
+@media (max-width: 600px) {
+  .fade-text {
+    font-size: 1.3rem;
+  }
+
+  .logo {
+    width: 150px;
+  }
 }
 
 @keyframes fadeIn {
