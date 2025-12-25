@@ -4,15 +4,15 @@ backend:
   branch: main
   base_url: https://api.netlify.com
   auth_endpoint: auth
-media_folder: 'images'
-public_folder: 'images/uploads'
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 editor:
-  preview: false
+  preview: true
 collections:
   - name: 'blog'
     label: 'Blog'
     create: true
-    slug: '---'
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     folder: '_posts/'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
